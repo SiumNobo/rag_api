@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  rag-api:
+    build: .
+    container_name: rag-api
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - ./uploads:/app/uploads
+      - ./vector_store:/app/vector_store
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional: Streamlit UI
+  rag-ui:
+    build: .
+    container_name: rag-ui
+    command: streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      - RAG_API_URL=http://rag-api:8000
+    depends_on:
+      - rag-api
+    restart: unless-stopped

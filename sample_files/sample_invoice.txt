@@ -1,0 +1,53 @@
+Invoice #INV-2024-001
+======================
+
+Company: TechCorp Solutions Inc.
+Date: January 15, 2024
+Due Date: February 14, 2024
+
+Bill To:
+--------
+Acme Corporation
+123 Business Street
+New York, NY 10001
+
+Items:
+------
+1. Cloud Infrastructure Setup - $5,000.00
+   - AWS EC2 instances configuration
+   - Load balancer setup
+   - Database migration
+
+2. Software Development Services - $15,000.00
+   - Custom API development (40 hours)
+   - Frontend implementation (60 hours)
+   - Quality assurance testing (20 hours)
+
+3. Annual Support License - $2,400.00
+   - 24/7 technical support
+   - Monthly maintenance updates
+   - Security patches
+
+Subtotal: $22,400.00
+Tax (8%): $1,792.00
+-----------------------
+Total: $24,192.00
+
+Payment Terms:
+--------------
+Payment is due within 30 days of invoice date. 
+Late payments will incur a 1.5% monthly fee.
+
+Accepted payment methods:
+- Bank transfer (ACH)
+- Credit card (Visa, Mastercard, Amex)
+- Check (payable to TechCorp Solutions Inc.)
+
+Bank Details:
+Bank: First National Bank
+Account: 1234567890
+Routing: 021000021
+
+Thank you for your business!
+
+Contact: billing@techcorp.com | Phone: (555) 123-4567
